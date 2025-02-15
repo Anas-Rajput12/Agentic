@@ -10,35 +10,45 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             
-            <header className="p-6 bg-black text-white">
-    <div className="flex flex-col sm:flex-row justify-between items-center">
-        {/* Logo & Title */}
+            <header className="fixed top-0 left-0 w-full bg-black text-white z-50 shadow-lg py-4 h-auto">
+    <div className="flex flex-col sm:flex-row justify-between items-center px-4">
         <div className="flex items-center">
             <img src="/logo.png" alt="Logo" className="w-8 mr-2" />
-            <h1 className="text-xl font-bold">Car Rental AI</h1>
+            <h1 className="text-lg sm:text-xl font-bold">Car Rental AI</h1>
         </div>
 
-        {/* Navigation - Responsive */}
-        <nav className="mt-4 sm:mt-0">
-            <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-center">
+        <nav className="mt-2 sm:mt-0">
+            <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 text-center text-sm">
                 <li><a href="#features" className="hover:text-gray-400">Features</a></li>
-                <li><a href="#pricing" className="hover:text-gray-400">Pricing</a></li>
+                <li><a href="#technology" className="hover:text-gray-400">Technology</a></li>
+                {/* <li><a href="#pricing" className="hover:text-gray-400">Pricing</a></li> */}
                 <li><a href="#fleet" className="hover:text-gray-400">Our Fleet</a></li>
                 <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
             </ul>
         </nav>
-        <a href="#" className="bg-gray-700 px-4 py-2 rounded-full text-white font-bold">Book Now</a>
-    </div>
 
+        <a href="#" className="bg-gray-700 px-3 py-2 text-xs sm:text-sm rounded-full text-white font-bold mt-2 sm:mt-0">
+            Book Now
+        </a>
+    </div>
 </header>
 
+<main className="text-center p-6 pt-64 sm:pt-48 md:pt-32">
+    <h2 className="text-2xl sm:text-3xl font-bold">AI-Powered Car Rentals</h2>
+    <p className="text-gray-500 mt-4 text-sm sm:text-base">
+        Smart AI recommendations and seamless booking experience.
+    </p>
+</main>
+
+
+
             
-            <main className="text-center p-10">
-                <h2 className="text-3xl font-bold">AI-Powered Car Rentals</h2>
-                <p className="text-gray-500 mt-4">Smart AI recommendations and seamless booking experience.</p>
-            </main>
-            
-            <section id="features" className="p-6 md:p-10">
+<section 
+    id="features" 
+    className="p-6 pt-64 sm:pt-48 md:pt-32"
+>
+
+
             <h2 className="text-2xl font-bold text-center">Features</h2>
                 <div className="grid grid-cols md:flex-cols-2 gap-6 mt-6 lg:flex">
                     <div className="p-4 border rounded-lg bg-gray-100">
@@ -59,8 +69,30 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            <section id="technology" className="p-6 pt-64 sm:pt-48 md:pt-32">
+                <h2 className="text-2xl font-bold text-center">Technology & AI Agents</h2>
+                <div className="grid grid-cols md:flex-cols-2 gap-6 mt-6 lg:flex">
+                    <div className="p-4 border rounded-lg bg-gray-100">
+                        <h3 className="text-xl font-bold">AI Virtual Assistant</h3>
+                        <p className="text-gray-600 mt-2">Interact with our AI assistant for personalized rental suggestions and instant support.</p>
+                    </div>
+                    <div className="p-4 border rounded-lg bg-gray-100">
+                        <h3 className="text-xl font-bold">Dynamic Pricing Engine</h3>
+                        <p className="text-gray-600 mt-2">Our AI-driven pricing model adjusts rates based on demand, season, and location.</p>
+                    </div>
+                    <div className="p-4 border rounded-lg bg-gray-100">
+                        <h3 className="text-xl font-bold">Automated Fleet Management</h3>
+                        <p className="text-gray-600 mt-2">Track availability, maintenance, and utilization with AI-powered automation.</p>
+                    </div>
+                    <div className="p-4 border rounded-lg bg-gray-100">
+                        <h3 className="text-xl font-bold">Smart Analytics</h3>
+                        <p className="text-gray-600 mt-2">Gain insights into your rental patterns, vehicle preferences, and travel habits.</p>
+                    </div>
+                </div>
+            </section>
             
-            <section id="fleet" className="p-6 md:p-10">
+            <section id="fleet" className="p-6 pt-64 sm:pt-48 md:pt-32">
     <h2 className="text-2xl font-bold text-center">Our Fleet</h2>
     <p className="text-black text-sm md:text-base text-center">
         Choose from a wide range of cars suited to your needs.
@@ -94,7 +126,7 @@ export default function Home() {
 </section>
 
             
-            <section id="contact" className="p-10">
+            <section id="contact" className="p-6 pt-64 sm:pt-48 md:pt-32">
                 <h2 className="text-2xl font-bold">Contact Us</h2>
                 <form className="flex flex-col space-y-4">
     <input 
