@@ -1,101 +1,186 @@
-import Image from "next/image";
+import Head from 'next/head';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    return (
+        <div>
+            <Head>
+                <title>Car Rental AI Commerce</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="AI-powered car rental commerce platform for seamless bookings." />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            
+            <header className="p-6 bg-black text-white">
+    <div className="flex flex-col sm:flex-row justify-between items-center">
+        {/* Logo & Title */}
+        <div className="flex items-center">
+            <img src="/logo.png" alt="Logo" className="w-8 mr-2" />
+            <h1 className="text-xl font-bold">Car Rental AI</h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Navigation - Responsive */}
+        <nav className="mt-4 sm:mt-0">
+            <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-center">
+                <li><a href="#features" className="hover:text-gray-400">Features</a></li>
+                <li><a href="#pricing" className="hover:text-gray-400">Pricing</a></li>
+                <li><a href="#fleet" className="hover:text-gray-400">Our Fleet</a></li>
+                <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#" className="bg-gray-700 px-4 py-2 rounded-full text-white font-bold">Book Now</a>
     </div>
-  );
+
+</header>
+
+            
+            <main className="text-center p-10">
+                <h2 className="text-3xl font-bold">AI-Powered Car Rentals</h2>
+                <p className="text-gray-500 mt-4">Smart AI recommendations and seamless booking experience.</p>
+            </main>
+            
+            <section id="features" className="p-6 md:p-10">
+            <h2 className="text-2xl font-bold text-center">Features</h2>
+                <div className="grid grid-cols md:flex-cols-2 gap-6 mt-6 lg:flex">
+                    <div className="p-4 border rounded-lg bg-gray-100">
+                        <h3 className="text-xl font-bold">AI-Powered Car Suggestions</h3>
+                        <p className="text-gray-600 mt-2">Get personalized car recommendations based on your preferences and needs.</p>
+                    </div>
+                    <div className="p-4 border rounded-lg bg-gray-100">
+                        <h3 className="text-xl font-bold">Automated Rental Booking</h3>
+                        <p className="text-gray-600 mt-2">Seamlessly book your preferred car with an automated booking system.</p>
+                    </div>
+                    <div className="p-4 border rounded-lg bg-gray-100">
+                        <h3 className="text-xl font-bold">Real-Time Car Tracking</h3>
+                        <p className="text-gray-600 mt-2">Track your rented car in real-time for added security and convenience.</p>
+                    </div>
+                    <div className="p-4 border rounded-lg bg-gray-100">
+                        <h3 className="text-xl font-bold">24/7 Customer Support</h3>
+                        <p className="text-gray-600 mt-2">Get round-the-clock assistance for all your rental-related queries.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="fleet" className="p-6 md:p-10">
+    <h2 className="text-2xl font-bold text-center">Our Fleet</h2>
+    <p className="text-black text-sm md:text-base text-center">
+        Choose from a wide range of cars suited to your needs.
+    </p>
+    <div className="grid grid-cols md:flex-cols-2 gap-6 mt-6 lg:flex">
+        <div className="p-4 border rounded-lg bg-gray-100">
+            <h3 className="text-xl font-bold">Economy Cars</h3>
+            <p className="text-gray-600 mt-2">
+                Affordable and fuel-efficient cars for budget-conscious travelers.
+            </p>
+        </div>
+        <div className="p-4 border rounded-lg bg-gray-100">
+            <h3 className="text-xl font-bold">Luxury Cars</h3>
+            <p className="text-gray-600 mt-2">
+                Experience premium comfort with our high-end luxury vehicles.
+            </p>
+        </div>
+        <div className="p-4 border rounded-lg bg-gray-100">
+            <h3 className="text-xl font-bold">SUVs & Crossovers</h3>
+            <p className="text-gray-600 mt-2">
+                Spacious and powerful SUVs perfect for family trips and off-road adventures.
+            </p>
+        </div>
+        <div className="p-4 border rounded-lg bg-gray-100">
+            <h3 className="text-xl font-bold">Electric Vehicles</h3>
+            <p className="text-gray-600 mt-2">
+                Eco-friendly electric cars for a sustainable and efficient ride.
+            </p>
+        </div>
+    </div>
+</section>
+
+            
+            <section id="contact" className="p-10">
+                <h2 className="text-2xl font-bold">Contact Us</h2>
+                <form className="flex flex-col space-y-4">
+    <input 
+        type="text" 
+        placeholder="Your Name" 
+        required 
+        className="p-2 rounded border border-black"
+    />
+    <input 
+        type="email" 
+        placeholder="Your Email" 
+        required 
+        className="p-2 rounded border border-black"
+    />
+    <textarea 
+        placeholder="Your Message" 
+        required 
+        className="p-2 rounded border border-black"
+    ></textarea>
+    <button 
+        type="submit" 
+        className="bg-black text-white py-2 rounded"
+    >
+        Send
+    </button>
+</form>
+
+            </section>
+            
+            <footer className="bg-black text-gray-400 py-10 px-5">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        {/* Brand Section */}
+        <div>
+        <div className="flex items-center">
+            <img src="/logo.png" alt="Logo" className="w-8 mr-2" />
+            <h1 className="text-xl font-bold text-white">Car Rental AI</h1>
+        </div>
+          <p className="mt-2 text-sm">
+            Smart car rentals with AI-powered recommendations and seamless bookings.
+          </p>
+          <div className="flex space-x-3 mt-3">
+            <a href="#" className="hover:text-white">🐱</a>
+            <a href="#" className="hover:text-white">🔗</a>
+            <a href="#" className="hover:text-white">🐦</a>
+          </div>
+        </div>
+
+        {/* Product Section */}
+        <div>
+          <h3 className="text-white text-lg font-semibold">Services</h3>
+          <ul className="mt-2 space-y-1">
+            <li><a href="#" className="hover:text-white">Car Listings</a></li>
+            <li><a href="#" className="hover:text-white">AI Recommendations</a></li>
+            <li><a href="#" className="hover:text-white">Pricing</a></li>
+            <li><a href="#" className="hover:text-white">Booking Process</a></li>
+          </ul>
+        </div>
+
+        {/* Company Section */}
+        <div>
+          <h3 className="text-white text-lg font-semibold">Company</h3>
+          <ul className="mt-2 space-y-1">
+            <li><a href="#" className="hover:text-white">About Us</a></li>
+            <li><a href="#" className="hover:text-white">Blog</a></li>
+            <li><a href="#" className="hover:text-white">Careers</a></li>
+            <li><a href="#" className="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Legal Section */}
+        <div>
+          <h3 className="text-white text-lg font-semibold">Legal</h3>
+          <ul className="mt-2 space-y-1">
+            <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" className="hover:text-white">Terms of Service</a></li>
+            <li><a href="#" className="hover:text-white">Security</a></li>
+            <li><a href="#" className="hover:text-white">Compliance</a></li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Copyright Section */}
+      <div className="text-center text-sm text-gray-500 mt-10">
+        © 2025 CarRental AI. Powered by Agentic AI. All rights reserved.
+      </div>
+    </footer>
+        </div>
+    );
 }
